@@ -1,0 +1,14 @@
+%div#registration_container.container
+  = render 'shared/messages'
+  %h1.text-center Prijava
+  %br
+  = form_tag '/login', class: "form col-md-12 center-block", method: 'post' do
+    = email_field_tag :email, '', class: "form-control input-lg", placeholder: "E-pošta"
+    %br
+    = password_field_tag :password, '', class: "form-control input-lg", placeholder: "Lozinka"
+    %br
+    %button.btn.btn-primary.btn-lg.btn-block Prijava
+    %br
+    %span.pull-right
+      Još se niste registrirali?
+      = link_to "Registrirajte se ovdje", register_path

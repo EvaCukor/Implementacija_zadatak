@@ -1,0 +1,17 @@
+development:
+  adapter: postgresql
+  encoding: unicode
+  database: price_checker_development
+  template: template0
+  pool: 5
+  username: ubuntu
+  password: password
+
+test:
+  adapter: postgresql
+  encoding: unicode
+  database: price_checker_test
+  template: template0
+  pool: 5
+  username: ubuntu
+  password: password

@@ -1,0 +1,15 @@
+%div.navbar.navbar-default.navbar-fixed-top
+  %div.container
+    %div.navbar-header
+      %span.navbar-brand Skup&Jeftino
+    %ul.nav.navbar-nav.navbar-left
+      %li= link_to 'Moji računi', receipts_path
+      %li= link_to 'Novi račun', new_receipt_path
+      %li= link_to 'Pretraživanje artikala', "#"
+    %ul.nav.navbar-nav.navbar-right
+      - if !current_user
+        %li= link_to 'Prijava', login_path
+        %li= link_to 'Registracija', register_path
+      - else
+        %li.navbar-text Zdravo, #{current_user.name.titleize}!
+        %li= link_to 'Odjava', logout_path

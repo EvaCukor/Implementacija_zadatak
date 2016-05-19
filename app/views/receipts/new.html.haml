@@ -1,0 +1,26 @@
+%div#form_container.container
+  %h2 Novi račun
+  %br
+  = form_for @receipt do |f|
+    %div.form-group.form-inline
+      = f.label "Naziv računa"
+      = f.text_field :name, class: 'form-control'
+    %div.form-group
+    %strong Odaberite trgovinu ili unesite novu
+    %br
+    - Store.all.each do |store|
+      = f.radio_button :store_id, store.id
+      = f.label :store_id, store.name
+      = " (#{store.street_name} #{store.street_no}, #{store.postcode} #{store.city})"
+      %br
+    %br
+    %br
+    %strong Unesite kupljene artikle
+    = f.fields_for :items do |item|
+      %div.form-group.form-inline
+        = item.label "Naziv artikla"
+        = item.text_field :name, class: 'form-control'
+        = item.label "Cijena"
+        = item.number_field :price, class: 'form-control'
+    %br
+    %button.btn.btn-primary Spremi

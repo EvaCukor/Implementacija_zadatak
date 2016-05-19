@@ -1,0 +1,12 @@
+%div#registration_container.container
+  %h1.text-center Registracija
+  %br
+  = bootstrap_form_for @user, html: { class: "form col-md-12 center-block" } do |f|
+    = f.text_field :name, label: "Vaše ime"
+    = f.email_field :email, label: "Adresa e-pošte"
+    = f.password_field :password
+    %button.btn.btn-primary.btn-lg.btn-block Register
+    %br
+    %span.pull-right
+      Već ste se registrali?
+      = link_to "Prijavite se ovdje", login_path
