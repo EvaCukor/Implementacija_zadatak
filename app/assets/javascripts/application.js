@@ -12,7 +12,10 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require_tree .
+
 //= require bootstrap-sprockets
 //= require jquery_nested_form
+//= require items.js
+
+//= require_tree .
 

@@ -4,8 +4,8 @@
       %span.navbar-brand Skup&Jeftino
     %ul.nav.navbar-nav.navbar-left
       %li= link_to 'Moji računi', receipts_path
-      %li= link_to 'Novi račun', new_receipt_path
-      %li= link_to 'Pretraživanje artikala', "#"
+      %li= link_to 'Novi račun', root_path
+      %li= link_to 'Pretraživanje artikala', search_items_path
     %ul.nav.navbar-nav.navbar-right
       - if !current_user
         %li= link_to 'Prijava', login_path

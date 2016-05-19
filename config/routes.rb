@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root to: 'users#new'
+  root to: 'receipts#new'
   
   get '/register', to: 'users#new'
   get '/login', to: 'sessions#new'
@@ -7,6 +7,8 @@ Rails.application.routes.draw do
   get '/logout', to: 'sessions#destroy'
   
   resources :users, only: :create
-  resources :receipts, only: [:new, :create, :index]
+  resources :receipts, only: [:create, :index]
   resources :items
+  
+  get '/search', to: 'items#search', as: 'search_items'
 end
