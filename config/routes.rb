@@ -5,10 +5,11 @@ Rails.application.routes.draw do
   get '/login', to: 'sessions#new'
   post '/login', to: 'sessions#create'
   get '/logout', to: 'sessions#destroy'
+  get '/search', to: 'items#search', as: 'search_items'
   
   resources :users, only: :create
-  resources :receipts, only: [:create, :index]
+  resources :receipts, only: [:create, :index] do
+    get :autocomplete_item_name, :on => :collection
+  end
   resources :items
-  
-  get '/search', to: 'items#search', as: 'search_items'
 end

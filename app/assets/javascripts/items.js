@@ -43,7 +43,8 @@ function addItemsField() {
     inputName.setAttribute("name", nameAttributName);
     div.appendChild(inputName);
     
-    inputName.className = "form-control"
+    inputName.className = "form-control"        // = item.autocomplete_field :name, autocomplete_item_name_receipts_path
+    inputName.setAttribute("data-autocomplete", "/receipts/autocomplete_item_name");
     div.innerHTML += ' ';
  
     //create label for Price, set it's for attribute, 

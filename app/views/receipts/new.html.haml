@@ -20,6 +20,7 @@
       %div#new-articles
         %div.form-group.form-inline
           = item.label "Naziv artikla"
+          = item.autocomplete_field :name, autocomplete_item_name_receipts_path, class: 'form-control'
           = item.text_field :name, class: 'form-control'
           = item.label "Cijena"
           = item.number_field :price, class: 'form-control'

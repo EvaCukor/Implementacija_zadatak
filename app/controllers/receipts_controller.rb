@@ -1,5 +1,6 @@
 class ReceiptsController < ApplicationController
   before_action :require_user
+  autocomplete :item, :name
   
   def index
   end

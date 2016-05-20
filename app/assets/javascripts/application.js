@@ -15,7 +15,11 @@
 
 //= require bootstrap-sprockets
 //= require jquery_nested_form
+//= require jquery-ui
+//= require autocomplete-rails
 //= require items.js
 
 //= require_tree .
+
+
 

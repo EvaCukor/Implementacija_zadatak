@@ -14,6 +14,8 @@ gem 'bcrypt'
 gem 'fabrication'
 gem 'faker'
 gem 'nested_form'
+gem 'rails4-autocomplete'
+gem 'jquery-ui-rails'
 
 group :development do
   gem 'thin'

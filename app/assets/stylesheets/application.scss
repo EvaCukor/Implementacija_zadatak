@@ -60,4 +60,8 @@
   margin-top: 70px;
 }
 
-//.page-header { margin-top: 75px; }
+.ui-helper-hidden-accessible { position: absolute; left:-999em; }
+
+ul.ui-autocomplete {
+    list-style: none;
+}
