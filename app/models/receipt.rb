@@ -1,5 +1,5 @@
 class Receipt < ActiveRecord::Base
-  validates_presence_of :name
+  validates_presence_of :name, :store, :items
   
   belongs_to :user
   belongs_to :store

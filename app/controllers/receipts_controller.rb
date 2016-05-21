@@ -16,7 +16,7 @@ class ReceiptsController < ApplicationController
     
     if @receipt.save
       flash[:notice] = "Račun je uspješno spremljen."
-      redirect_to receipts_path
+      redirect_to root_path
     else
       @receipt.items.build
       render :new
