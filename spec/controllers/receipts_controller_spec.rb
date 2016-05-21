@@ -9,10 +9,10 @@ describe ReceiptsController do
       get :new
       expect(assigns(:receipt)).to be_instance_of(Receipt)
     end
-    # it "builds items" do
-    #   get :new
-    #   expect(assigns(:receipt)).items.to exist
-    # end
+    it "builds items" do
+      get :new
+      expect(assigns(:receipt).items).to exist
+    end
   end
   
   describe "POST create" do
