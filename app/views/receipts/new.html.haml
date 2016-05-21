@@ -20,10 +20,9 @@
       %div#new-articles
         %div.form-group.form-inline
           = item.label "Naziv artikla"
-          = item.autocomplete_field :name, autocomplete_item_name_receipts_path, class: 'form-control'
-          = item.text_field :name, class: 'form-control'
+          = item.text_field :name, "data-autocomplete" => "/receipts/autocomplete_item_name", class: 'form-control'
           = item.label "Cijena"
-          = item.number_field :price, class: 'form-control'
+          = item.number_field :price, class: 'form-control', step: "any"
     = link_to "Dodaj još jedan artikl", "#", onclick: "addItemsField()"
     %br
     %br

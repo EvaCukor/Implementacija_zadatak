@@ -37,7 +37,6 @@ ActiveRecord::Schema.define(version: 20160517172246) do
     t.string   "name"
     t.string   "street_name"
     t.string   "city"
-    t.string   "country"
     t.integer  "street_no"
     t.integer  "postcode"
     t.datetime "created_at"
